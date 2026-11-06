@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="FORMA 家居概念设计：以自然材质与克制线条，为日常留一处自在空间。探索家具系列、材质灵感与空间计划。">
+  <title>FORMA 家居 — 留白之间，自在生活</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/hero.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#collections">跳到设计系列</a>
+<header class="header" id="header">
+  <a class="wordmark" href="#home" aria-label="FORMA 家居首页">FORMA<span>®</span></a>
+  <nav class="desktop-nav" aria-label="主要导航">
+    <a href="#collections">设计系列</a><a href="#materials">材质与细节</a><a href="#about">关于 FORMA</a>
+  </nav>
+  <button class="nav-inquire" data-inquire>开始空间计划 <span aria-hidden="true">↗</span></button>
+  <button class="menu-trigger icon-button" aria-label="打开导航菜单" aria-haspopup="dialog" aria-controls="mobile-menu"><span></span><span></span></button>
+</header>
+<main>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-media"><img src="assets/hero.webp" alt="午后阳光落在亚麻沙发、胡桃木茶几与自然质感的客厅里" width="1774" height="887" fetchpriority="high"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="eyebrow hero-eyebrow">OBJECTS FOR A SLOWER LIFE</p>
+      <h1 id="hero-title"><span>留白之间，</span><span>自在生活。</span></h1>
+      <p class="hero-description">让家具回归生活，让空间留给自己。<br>从一件喜爱的作品，开始家的故事。</p>
+      <a class="pill light hero-cta" href="#collections">探索设计系列 <span class="arrow-disc" aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-footer"><span><span>日常的另一种可能</span><i></i><span class="hero-footer-en">A QUIETER KIND OF LIVING</span></span><a href="#collections" aria-label="向下浏览设计系列">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    <span class="concept-label">CONCEPT COLLECTION / 01</span>
+  </section>
+  <div class="intro-strip wrap"><span class="eyebrow">THE FORMA WAY</span><p>为每一种日常，留一处恰好的空间。</p><span class="edition">自然 · 从容 · 恒久</span></div>
+
+  <section class="collection section wrap" id="collections" aria-labelledby="collection-title">
+    <div class="section-heading" data-reveal>
+      <div><p class="eyebrow">01 / THE COLLECTION</p><h2 id="collection-title">恰如其分的陪伴。</h2></div>
+      <p class="section-description">不急于填满空间。<br>让每一件留下的家具，都有被喜爱的理由。</p>
+    </div>
+    <div class="collection-toolbar"><div class="filters" role="group" aria-label="筛选作品">
+      <button class="filter active" data-filter="all" aria-pressed="true">全部作品 <span>03</span></button>
+      <button class="filter" data-filter="seating" aria-pressed="false">座椅与沙发</button>
+      <button class="filter" data-filter="objects" aria-pressed="false">桌几与灯具</button>
+      <button class="filter" data-filter="favorites" aria-pressed="false">我的收藏 <span id="favorite-count">0</span></button>
+    </div><span class="collection-note">DESIGNED FOR EVERYDAY</span></div>
+    <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+    <div class="product-grid" id="product-grid"></div>
+    <div class="empty-state" id="empty-state" hidden><p>把心动的作品，留在这里。</p><span>点击作品右上角的爱心，即可加入收藏。</span><button class="text-link" id="reset-filter">浏览全部作品 <span aria-hidden="true">↗</span></button></div>
+    <div class="collection-foot"><span>以线条勾勒秩序，用材质承接温度。</span><span>精选概念系列 / 01—03</span></div>
+  </section>
+
+  <section class="material-section" id="materials" aria-labelledby="materials-title">
+    <div class="material-layout wrap">
+      <div class="material-visual" data-reveal><img id="material-image" src="assets/chair.webp" alt="弧木休闲椅的胡桃木扶手与亚麻织物细节" width="1024" height="1536" loading="lazy"><span class="image-annotation"><span id="material-image-label">01 / THE WARMTH OF WOOD</span><span>FORMA — MATERIAL STUDY</span></span></div>
+      <div class="material-copy" data-reveal><p class="eyebrow">02 / MATERIAL MATTERS</p><h2 id="materials-title">好的设计，<br>经得起靠近。</h2><p class="material-intro">目光之外，还有触感。<br>我们想把自然的温度，留在每天相处的细节里。</p>
+        <div class="material-tabs" role="tablist" aria-label="材质灵感">
+          <button role="tab" aria-selected="true" aria-controls="material-panel" id="wood-tab" data-material="wood"><span>01</span>温润木纹<span aria-hidden="true">↗</span></button>
+          <button role="tab" aria-selected="false" aria-controls="material-panel" id="linen-tab" tabindex="-1" data-material="linen"><span>02</span>细腻织物<span aria-hidden="true">↗</span></button>
+          <button role="tab" aria-selected="false" aria-controls="material-panel" id="light-tab" tabindex="-1" data-material="light"><span>03</span>柔和光影<span aria-hidden="true">↗</span></button>
+        </div>
+        <div id="material-panel" role="tabpanel" aria-labelledby="wood-tab" tabindex="0"><p id="material-description">深浅交错的木纹，让利落的线条也拥有柔软的表情。从扶手的一道弧度，到桌面的一圈年轮，细节值得慢慢欣赏。</p></div>
+        <span class="material-caption">MATERIAL INSPIRATION / 材质灵感</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section wrap" id="about" aria-labelledby="about-title">
+    <p class="eyebrow" data-reveal>03 / OUR POINT OF VIEW</p>
+    <h2 class="serif-statement" id="about-title" data-reveal>Less, <em>but closer.</em></h2>
+    <p class="about-lede" data-reveal>少一点堆叠，多一点与生活的亲近。</p>
+    <p class="about-description" data-reveal>家不必成为展厅。它可以容得下一本没读完的书、<br class="desktop-break">一段放空的午后，以及每一个真实的你。</p>
+    <div class="principles">
+      <article data-reveal><span class="eyebrow">01 — PURPOSE</span><h3>为日常而设计</h3><p>从坐下、倚靠、随手放下一杯茶开始，让形态回应真实的生活。</p></article>
+      <article data-reveal><span class="eyebrow">02 — CHARACTER</span><h3>留住材质的表情</h3><p>木纹的深浅，织物的肌理。那些细小的不同，构成家的独特气息。</p></article>
+      <article data-reveal><span class="eyebrow">03 — SPACE</span><h3>给生活一点余地</h3><p>不填满每一个角落。让光线穿过，让自在发生，让空间慢慢长成家。</p></article>
+    </div>
+  </section>
+
+  <section class="invitation" id="contact" aria-labelledby="contact-title"><div class="wrap invitation-inner">
+    <div data-reveal><p class="eyebrow">YOUR SPACE, YOUR PACE</p><h2 id="contact-title">让理想的家，<br>从一个想法开始。</h2></div>
+    <div class="invitation-action" data-reveal><p>一把椅子，一个角落，或一整个家。<br>整理你的空间灵感，留下一份属于自己的计划。</p><button class="pill dark" data-inquire>开始空间计划 <span class="arrow-disc" aria-hidden="true">↗</span></button><span class="demo-note">概念体验：生成清单，不会发送预约。</span></div>
+  </div></section>
+</main>
+<footer class="footer wrap"><div class="footer-top"><a class="footer-home" href="#home">自在生活，自有形状。<span aria-hidden="true">↗</span></a><nav aria-label="页脚导航"><a href="#collections">设计系列</a><a href="#materials">材质灵感</a><button data-inquire>空间计划</button></nav></div><div class="footer-wordmark" aria-hidden="true">FORMA<span>®</span></div><div class="footer-bottom"><span>© 2026 FORMA · 品牌概念设计</span><span>虚构品牌与产品 · AI 生成图片 · 非销售页面</span><a href="#home">回到顶部 ↑</a></div></footer>
+
+<dialog class="mobile-menu" id="mobile-menu" aria-label="网站导航"><div class="mobile-menu-top"><span class="wordmark">FORMA®</span><button class="close-button" data-close aria-label="关闭导航菜单">×</button></div><nav><a href="#collections"><span>01</span>设计系列 ↗</a><a href="#materials"><span>02</span>材质与细节 ↗</a><a href="#about"><span>03</span>关于 FORMA ↗</a></nav><button class="pill dark" data-inquire>开始空间计划 <span aria-hidden="true">↗</span></button><p>A QUIETER KIND OF LIVING.</p></dialog>
+<dialog class="product-dialog" id="product-dialog" aria-labelledby="product-title"><button class="close-button" data-close aria-label="关闭产品详情">×</button><div class="product-dialog-grid"><img id="detail-image" src="assets/chair.webp" alt="" width="1024" height="1536"><div class="product-dialog-copy"><p class="eyebrow" id="detail-category"></p><h2 id="product-title"></h2><p class="detail-english" id="detail-english"></p><p id="detail-description"></p><dl id="detail-specs"></dl><p class="detail-disclaimer">此作品为概念设计，图像与规格仅作灵感展示。</p><button class="pill dark" id="plan-product">加入空间计划 <span aria-hidden="true">↗</span></button></div></div></dialog>
+<dialog class="inquiry-dialog" id="inquiry-dialog" aria-labelledby="inquiry-title"><button class="close-button" data-close aria-label="关闭空间计划">×</button><p class="eyebrow">A LITTLE ROOM FOR YOUR IDEAS</p><h2 id="inquiry-title">开始你的空间计划。</h2><p class="form-intro">把喜欢的作品与生活想法，整理成一份可下载的清单。</p>
+  <form id="inquiry-form"><div class="form-grid"><label>如何称呼你 <span>*</span><input name="name" autocomplete="name" maxlength="50" required placeholder="你的称呼"></label><label>电子邮箱 <span>*</span><input name="email" type="email" autocomplete="email" maxlength="120" required placeholder="you@example.com"></label><label>空间类型 <span>*</span><select name="space" required><option value="">选择你的空间</option><option>客厅</option><option>阅读角</option><option>卧室</option><option>完整居所</option><option>其他空间</option></select></label><label>心仪作品<select name="product"><option value="">还在寻找灵感</option value="cloud">云屿 · Cloud Sofa</option><option value="arc">弧木 · Arc Lounge</option><option value="dusk">暮光 · Dusk Objects</option></select></label></div><label>想让空间变成什么样？<textarea name="message" rows="3" maxlength="1500" placeholder="例如：一个能晒到太阳的阅读角，想要木色与柔软的织物……"></textarea></label><label class="consent"><input type="checkbox" required><span>我知道这是概念体验，信息仅用于本地生成清单，不会发送或完成预约。</span></label><button type="submit" class="pill dark">生成我的清单 <span aria-hidden="true">↗</span></button></form>
+  <div id="inquiry-result" hidden aria-live="polite"><div class="result-icon" aria-hidden="true">✓</div><h3>想法，已经有了形状。</h3><p>你的空间计划已生成。可以下载保存，留待之后与设计师沟通。<strong>没有发送任何信息，也未创建预约。</strong></p><dl id="result-summary"></dl><div class="result-actions"><button class="pill dark" id="download-plan">下载空间计划 <span aria-hidden="true">↓</span></button><button class="text-link" id="edit-plan">继续编辑</button></div></div>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
